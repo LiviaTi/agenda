@@ -1,5 +1,6 @@
 from functions import (
 	adicionar_contato,
+	ver_contatos,
 )
 
 agenda = []
@@ -20,5 +21,7 @@ while True:
 		telefone_contato = input("Digite o telefone: ")
 		email_contato = input("Digite o email: ")
 		adicionar_contato(agenda, nome_contato, telefone_contato, email_contato)
+	if escolha == 2:
+		ver_contatos(agenda)
 	if escolha == 6:
 		break

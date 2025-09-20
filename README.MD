@@ -14,6 +14,7 @@
 
 ## ▶️ Menu Principal
 ```bash
+Minha agenda:
 1. Salvar contato
 2. Ver contatos
 3. Editar contato

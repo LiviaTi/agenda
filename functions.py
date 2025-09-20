@@ -9,8 +9,20 @@ def ver_contatos(agenda):
 	print("\n [*] = favorito")
 	for indice, contato in enumerate(agenda, start = 1):
 		status = "*" if contato["favorito"] else " "
-		nome_contato = contato["nome"];
-		telefone_contato = contato["telefone"];
-		email_contato = contato["email"];
+		nome_contato = contato["nome"]
+		telefone_contato = contato["telefone"]
+		email_contato = contato["email"]
 		print(f"{indice}. [{status}] {nome_contato} = Telefone: {telefone_contato}  E-mail: {email_contato}")
 	return
+
+def editar_contato(agenda, indice_contato, telefone_atualizado):
+	indice_contato_int = int(indice_contato) - 1
+	if indice_contato_int >= 0 and indice_contato_int < len(agenda):
+		agenda[indice_contato_int]["telefone"] = telefone_atualizado
+		print(f"Contato {indice_contato} atualizou o número de telefone.")
+	else:
+		print("Indice de tarefa inválido")
+	return
+
+def favoritar_ou_desfavoritar(agenda, indice_contato)
+	indice_contato_int = int(indice_contato) - 1

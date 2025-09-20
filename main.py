@@ -3,7 +3,8 @@ from functions import (
 	ver_contatos,
 	editar_contato,
 	favoritar_ou_desfavoritar,
-	deletar_contato
+	deletar_contato,
+	contatos_favorito
 )
 
 agenda = []
@@ -14,8 +15,9 @@ while True:
 	print("2. Ver contatos")
 	print("3. Editar contato")
 	print("4. Marcar/Desmarcar contato como favorito")
-	print("5. Deletar contato")
-	print("6. Sair")
+	print("5. Lista de contatos favoritos")
+	print("6. Deletar contato")
+	print("7. Sair")
 
 	escolha = int(input("Digite a sua escolha: "))
 
@@ -32,10 +34,14 @@ while True:
 		telefone_atualizado = input("Digite o novo numero de telefone:")
 		editar_contato(agenda, indice_contato, telefone_atualizado)
 	if escolha == 4:
+		ver_contatos(agenda)
 		indice_contato = input("Digite o número indice do contato que deseja favoritar ou desfavoritar: ")
 		favoritar_ou_desfavoritar(agenda, indice_contato)
 	if escolha == 5:
+		contatos_favorito(agenda)
+	if escolha == 6:
+		ver_contatos(agenda)
 		indice_contato = input("Digite o indice do contato que deseja apagar:")
 		deletar_contato(agenda,indice_contato)
-	if escolha == 6:
+	if escolha == 7:
 		break

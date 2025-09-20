@@ -44,3 +44,13 @@ def deletar_contato(agenda, indice_contato):
 	else:
 		print("Indice de tarefa inválido")
 	return
+
+def contatos_favorito(agenda):
+    count = 0
+    for indice, contato in enumerate(agenda):
+        if contato.get("favorito") == True:
+            print(f"{indice}. {contato['nome']} | Telefone: {contato['telefone']} | E-mail: {contato['email']}")
+            count += 1
+    if count < 1:
+        print("Você não possui nenhum contato favoritado em sua agenda.")
+    return

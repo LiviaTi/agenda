@@ -24,5 +24,13 @@ def editar_contato(agenda, indice_contato, telefone_atualizado):
 		print("Indice de tarefa inválido")
 	return
 
-def favoritar_ou_desfavoritar(agenda, indice_contato)
+def favoritar_ou_desfavoritar(agenda, indice_contato):
 	indice_contato_int = int(indice_contato) - 1
+	if indice_contato_int >= 0 and indice_contato_int < len(agenda):
+		if (agenda[indice_contato_int]["favorito"] == True):
+			agenda[indice_contato_int]["favorito"] = False
+		else:
+			agenda[indice_contato_int]["favorito"] = True
+	else:
+		print("Indice de tarefa inválido")
+	return
